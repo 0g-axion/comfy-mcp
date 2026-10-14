@@ -28,6 +28,7 @@
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "tsc",
+    "prepack": "npm run build",
     "pretest": "npm run build",
     "test": "node --import tsx --test tools.test.mjs server.test.mjs http-session.test.mjs rpc.test.mjs swap.test.mjs creator-fees.test.mjs launch.test.mjs",
     "release:check": "node scripts/check-release.mjs",
