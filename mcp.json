@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "comfy": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@0g-axion/comfy-mcp@0.6.0"
+      ]
+    }
+  }
+}

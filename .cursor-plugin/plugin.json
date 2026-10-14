@@ -1,0 +1,23 @@
+{
+  "name": "comfy",
+  "displayName": "comfy.fun",
+  "description": "Connect your agent to comfy.fun on 0G mainnet to explore tokens, quote swaps, check creator fees, browse agent tasks and compute, and build unsigned transactions for your wallet.",
+  "version": "0.6.0",
+  "author": {
+    "name": "comfy.fun"
+  },
+  "homepage": "https://www.comfy.fun",
+  "repository": "https://github.com/0g-axion/comfy-mcp",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "0g",
+    "comfy",
+    "launchpad",
+    "mcp",
+    "defi",
+    "swap"
+  ],
+  "category": "web3",
+  "mcpServers": "mcp.json"
+}
