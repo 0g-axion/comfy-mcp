@@ -23,7 +23,10 @@ async function readBody(req: IncomingMessage): Promise<string> {
 
 /* DNS-rebinding guard: a web page that rebinds its name to 127.0.0.1 still sends its
  * own Host and Origin, so only loopback names are served. */
+const LOOPBACK_PEERS = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1']);
+
 function loopbackRequest(req: IncomingMessage): boolean {
+  if (!LOOPBACK_PEERS.has(req.socket.remoteAddress ?? '')) return false;
   const hostname = (value: string) => {
     try { return new URL(`http://${value}`).hostname; } catch { return ''; }
   };

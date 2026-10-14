@@ -16,7 +16,7 @@ export class Rpc {
     const id = ++this.id;
     try {
       const response = await this.fetchImpl(this.config.rpcUrl ?? DEFAULT_RPC_URL, {
-        method: 'POST', signal: AbortSignal.timeout(this.config.timeoutMs),
+        method: 'POST', redirect: 'error', signal: AbortSignal.timeout(this.config.timeoutMs),
         headers: { 'content-type': 'application/json', accept: 'application/json' },
         body: JSON.stringify({ jsonrpc: '2.0', id, method, params }),
       });
